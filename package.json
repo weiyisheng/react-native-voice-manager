@@ -1,5 +1,5 @@
 {
-  "name": "react-native-voice-recorder",
+  "name": "react-native-voice-manager",
   "version": "1.0.0",
   "description": "This Library is used in some chat App for voice recording and playing",
   "main": "index.js",
