@@ -3,8 +3,6 @@
 //  RCTVoiceRecorder
 //
 //  Created by gemini on 11/9/16.
-//  Copyright © 2016 gemini. All rights reserved.
-//  http://stackoverflow.com/questions/1010343/how-do-i-record-audio-on-iphone-with-avaudiorecorder
 //
 
 #import <Foundation/Foundation.h>
@@ -13,12 +11,12 @@
 
 #import <AVFoundation/AVFoundation.h>
 
-@interface RCTVoiceRecorder : NSObject <RCTBridgeModule>
+#import "FileCheck.h"
+
+@interface RNVoiceRecorder : NSObject <RCTBridgeModule>
 {
-    AVAudioPlayer *audioPlayer;
     AVAudioRecorder *audioRecorder;
     int recordEncoding;
-    NSString *audioPath;
     enum
     {
         ENC_AAC = 1,
@@ -30,9 +28,6 @@
     } encodingTypes;
 }
 
--(IBAction) startRecording;
--(IBAction) stopRecording;
--(IBAction) playRecording;
--(IBAction) stopPlaying;
+@property (nonatomic, strong) dispatch_source_t powerLevelTimer;
 
 @end

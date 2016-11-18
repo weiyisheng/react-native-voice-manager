@@ -7,8 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5CD6B0D31DD3288D005B4E53 /* RCTVoiceRecorder.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CD6B0D21DD3288D005B4E53 /* RCTVoiceRecorder.m */; };
-		5CD6B0D41DD3288D005B4E53 /* RCTVoiceRecorder.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 5CD6B0D11DD3288D005B4E53 /* RCTVoiceRecorder.h */; };
+		5C4AA75F1DDF06E800CF4F7B /* FileCheck.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C4AA75E1DDF06E800CF4F7B /* FileCheck.m */; };
+		5C551AF31DD46F9F00FC1A47 /* RNVoicePlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C551AF21DD46F9F00FC1A47 /* RNVoicePlayer.m */; };
+		5CD6B0D31DD3288D005B4E53 /* RNVoiceRecorder.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CD6B0D21DD3288D005B4E53 /* RNVoiceRecorder.m */; };
+		5CD6B0D41DD3288D005B4E53 /* RNVoiceRecorder.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 5CD6B0D11DD3288D005B4E53 /* RNVoiceRecorder.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -18,16 +20,20 @@
 			dstPath = "include/$(PRODUCT_NAME)";
 			dstSubfolderSpec = 16;
 			files = (
-				5CD6B0D41DD3288D005B4E53 /* RCTVoiceRecorder.h in CopyFiles */,
+				5CD6B0D41DD3288D005B4E53 /* RNVoiceRecorder.h in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		5CD6B0CE1DD3288D005B4E53 /* libRCTVoiceRecorder.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libRCTVoiceRecorder.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		5CD6B0D11DD3288D005B4E53 /* RCTVoiceRecorder.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RCTVoiceRecorder.h; sourceTree = "<group>"; };
-		5CD6B0D21DD3288D005B4E53 /* RCTVoiceRecorder.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RCTVoiceRecorder.m; sourceTree = "<group>"; };
+		5C4AA75D1DDF06E800CF4F7B /* FileCheck.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileCheck.h; sourceTree = "<group>"; };
+		5C4AA75E1DDF06E800CF4F7B /* FileCheck.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FileCheck.m; sourceTree = "<group>"; };
+		5C551AF11DD46F9F00FC1A47 /* RNVoicePlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RNVoicePlayer.h; sourceTree = "<group>"; };
+		5C551AF21DD46F9F00FC1A47 /* RNVoicePlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RNVoicePlayer.m; sourceTree = "<group>"; };
+		5CD6B0CE1DD3288D005B4E53 /* libRNVoiceRecorder.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libRNVoiceRecorder.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		5CD6B0D11DD3288D005B4E53 /* RNVoiceRecorder.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RNVoiceRecorder.h; sourceTree = "<group>"; };
+		5CD6B0D21DD3288D005B4E53 /* RNVoiceRecorder.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RNVoiceRecorder.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,7 +50,7 @@
 		5CD6B0C51DD3288D005B4E53 = {
 			isa = PBXGroup;
 			children = (
-				5CD6B0D01DD3288D005B4E53 /* RCTVoiceRecorder */,
+				5CD6B0D01DD3288D005B4E53 /* RNVoiceRecorder */,
 				5CD6B0CF1DD3288D005B4E53 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -52,26 +58,31 @@
 		5CD6B0CF1DD3288D005B4E53 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				5CD6B0CE1DD3288D005B4E53 /* libRCTVoiceRecorder.a */,
+				5CD6B0CE1DD3288D005B4E53 /* libRNVoiceRecorder.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		5CD6B0D01DD3288D005B4E53 /* RCTVoiceRecorder */ = {
+		5CD6B0D01DD3288D005B4E53 /* RNVoiceRecorder */ = {
 			isa = PBXGroup;
 			children = (
-				5CD6B0D11DD3288D005B4E53 /* RCTVoiceRecorder.h */,
-				5CD6B0D21DD3288D005B4E53 /* RCTVoiceRecorder.m */,
+				5CD6B0D11DD3288D005B4E53 /* RNVoiceRecorder.h */,
+				5CD6B0D21DD3288D005B4E53 /* RNVoiceRecorder.m */,
+				5C551AF11DD46F9F00FC1A47 /* RNVoicePlayer.h */,
+				5C551AF21DD46F9F00FC1A47 /* RNVoicePlayer.m */,
+				5C4AA75D1DDF06E800CF4F7B /* FileCheck.h */,
+				5C4AA75E1DDF06E800CF4F7B /* FileCheck.m */,
 			);
+			name = RNVoiceRecorder;
 			path = RCTVoiceRecorder;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		5CD6B0CD1DD3288D005B4E53 /* RCTVoiceRecorder */ = {
+		5CD6B0CD1DD3288D005B4E53 /* RNVoiceRecorder */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 5CD6B0D71DD3288D005B4E53 /* Build configuration list for PBXNativeTarget "RCTVoiceRecorder" */;
+			buildConfigurationList = 5CD6B0D71DD3288D005B4E53 /* Build configuration list for PBXNativeTarget "RNVoiceRecorder" */;
 			buildPhases = (
 				5CD6B0CA1DD3288D005B4E53 /* Sources */,
 				5CD6B0CB1DD3288D005B4E53 /* Frameworks */,
@@ -81,9 +92,9 @@
 			);
 			dependencies = (
 			);
-			name = RCTVoiceRecorder;
+			name = RNVoiceRecorder;
 			productName = RCTVoiceRecorder;
-			productReference = 5CD6B0CE1DD3288D005B4E53 /* libRCTVoiceRecorder.a */;
+			productReference = 5CD6B0CE1DD3288D005B4E53 /* libRNVoiceRecorder.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 /* End PBXNativeTarget section */
@@ -101,7 +112,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 5CD6B0C91DD3288D005B4E53 /* Build configuration list for PBXProject "RCTVoiceRecorder" */;
+			buildConfigurationList = 5CD6B0C91DD3288D005B4E53 /* Build configuration list for PBXProject "RNVoiceRecorder" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -113,7 +124,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				5CD6B0CD1DD3288D005B4E53 /* RCTVoiceRecorder */,
+				5CD6B0CD1DD3288D005B4E53 /* RNVoiceRecorder */,
 			);
 		};
 /* End PBXProject section */
@@ -123,7 +134,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5CD6B0D31DD3288D005B4E53 /* RCTVoiceRecorder.m in Sources */,
+				5C4AA75F1DDF06E800CF4F7B /* FileCheck.m in Sources */,
+				5CD6B0D31DD3288D005B4E53 /* RNVoiceRecorder.m in Sources */,
+				5C551AF31DD46F9F00FC1A47 /* RNVoicePlayer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -249,7 +262,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		5CD6B0C91DD3288D005B4E53 /* Build configuration list for PBXProject "RCTVoiceRecorder" */ = {
+		5CD6B0C91DD3288D005B4E53 /* Build configuration list for PBXProject "RNVoiceRecorder" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				5CD6B0D51DD3288D005B4E53 /* Debug */,
@@ -258,7 +271,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		5CD6B0D71DD3288D005B4E53 /* Build configuration list for PBXNativeTarget "RCTVoiceRecorder" */ = {
+		5CD6B0D71DD3288D005B4E53 /* Build configuration list for PBXNativeTarget "RNVoiceRecorder" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				5CD6B0D81DD3288D005B4E53 /* Debug */,

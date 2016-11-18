@@ -1,32 +1,36 @@
 import React from "react";
-const CustomRecord = require('NativeModules').CustomRecord
+import { NativeModules, NativeAppEventEmitter } from 'react-native'
+const { RNVoiceRecorder } = NativeModules
 
+class VoiceRecorder {
 
-export default AudioRecorder = {
+  startRecording(callBack) {
 
-  startRecord() {
-    CustomRecord.startRecord()
-  },
+    if(callBack) {
+      RNVoiceRecorder.startRecording(true)
 
-  stopRecord(callBack) {
-    CustomRecord.stopRecord((error, response) => {
-      //console.log(" response : ", response);
-      if(error) {
-        callBack({}, error)
-      } else {
-        callBack({path: response[0], size: response[1]}, error)
+      this.VoicePowerListener = NativeAppEventEmitter.addListener(
+        'VoicePowerEvent',
+        event => {
+          callBack({power: {
+            average: event.averagePower,
+            peak: event.peakPower
+          }})
+        })
+    } else {
+      RNVoiceRecorder.startRecording(false)
+    }
+  }
+
+  stopRecording(callBack) {
+    this.VoicePowerListener && this.VoicePowerListener.remove()
+
+    RNVoiceRecorder.stopRecording((error, response) => {
+      if(callBack) {
+        callBack(error, response)
       }
     })
-  },
-
-  playAudio(url) {
-    const fileUrl = url.substring(0, url.lastIndexOf('.')) + '.caf'
-    CustomRecord.playRecord(fileUrl)
-  },
-
-  stopPlayRecord() {
-    CustomRecord.stopPlayRecord()
-  },
+  }
 
   getFilePathAndName(uri) {
     if(uri) {
@@ -41,6 +45,6 @@ export default AudioRecorder = {
       return null
     }
   }
-
-
 }
+
+export default new VoiceRecorder()

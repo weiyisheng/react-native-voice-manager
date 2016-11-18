@@ -1,3 +1,10 @@
 import Recorder from './Recorder'
+import Player from './Player'
 
-export default Recorder
+
+export const VoiceRecorder = Recorder
+export const VoicePlayer = Player
+// export default {
+//   VoiceRecorder,
+//   VoicePlayer
+// }
